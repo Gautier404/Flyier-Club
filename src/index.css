@@ -8,9 +8,23 @@
 .container {
   width:100%;
   margin:auto;
+  background-color: #5680e9;
 }
 
 .text{
+  text-align: center;
+  color: #000;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  width: 70%;
+  background-color: #84ceeb;
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* #c1c8e4 */
+
+.title{
   text-align: center;
   color: #000;
   padding-top: 30px;
@@ -23,6 +37,7 @@
   width:100%;
   margin: auto;
 }
+
 @media(min-width:468px){
   .designTable {
     display:flex;
@@ -34,6 +49,20 @@
     padding: 1px;
     box-sizing:border-box;
     margin-bottom: 20px;
+  }
+  .rBoarder{
+    background-color: #8860d0;
+    width: 3%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+  }
+  .lBoarder{
+    background-color: #8860d0;
+    width: 3%;
+    height: 100%;
+    position: fixed;
+    left: 0;
   }
 }
 
@@ -49,6 +78,7 @@
     box-sizing:border-box;
     margin-bottom: 20px;
   }
+
 }
 
 .thumbnail-box {
@@ -69,6 +99,7 @@
   display:block;
   margin: auto;
   text-align: center;
+  color: 
 }
 
 .overlay {
@@ -104,12 +135,18 @@
   margin: auto;
   text-align: center;
   display:block;
+  color: white;
 }
 
 .design h4{
   margin: auto;
   text-align: center;
   display:block;
+  color: white;
+}
+
+.link{
+  color: #84ceeb;
 }
 
 .expanded {
@@ -150,9 +187,6 @@
   /* background-color: black; */
 }
 
-@media(min-width) {
-  
-}
 .expanded-image {
   position: absolute;
   top: 0;

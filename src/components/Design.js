@@ -17,7 +17,7 @@ const Design = ({design, onClick}) => {
                 </div>
             <h3>{design.title}</h3>
             <h4>{design.author}</h4>
-            <a href={design.design_path} download>click to download</a>
+            <a href={design.design_path} className='link' download>click to download</a>
         </div>
     );
 }

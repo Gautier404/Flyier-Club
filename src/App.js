@@ -60,10 +60,12 @@ function App() {
 
   return (
     <div className='container'>
+      <div className='rBoarder'></div>
+      <div className='lBoarder'></div>
       <div >
         <img src={svg} className='header'/>
-        <p className='text'> la;ldskj fasdjflsdkfj ;laf ldhfkl jadhflasdjhfkajsdh </p>
-        <h2 className='text'>Flyer Gallary</h2>
+        <p className='text'> la;ldskj fasdjflsdkfj ;laf ldhfkl jadsalkfj sdl;kfj a;lsdkfj ;aslkdfj ;ladskfj ;laksdf j;laksfj ;lakdsj f;laskdjf ;lkasdjf ;laksdjf ;laksdjf ;laksdjf ;lkadsjf ;laksdjf hflasdjhfkajsdh </p>
+        <h2 className='title'>Flyer Gallary</h2>
       </div>
       
   
