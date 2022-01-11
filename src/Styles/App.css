@@ -4,8 +4,26 @@
 /* ------------------- */
 /*    Mobile/Default   */
 /* ------------------- */
-.container{
+.container1{
     background: url("../designes/FLIERCLUB.svg");
+}
+
+.container2{
+    background: url("../designes/DISCORD.svg");
+}
+
+.container3{
+    background: url("../designes/GALLERY.svg");
+}
+
+.container4{
+    background: url("../designes/RECYCLE.svg");
+}
+
+.container1,
+.container2,
+.container3,
+.container4{
     background-color: var(--background-color);
     background-repeat: repeat;
     background-position: 25px 25px;
@@ -13,6 +31,8 @@
     padding-top:25px;
     flex-grow:1;
 }
+
+
 
 p, li{
     font-family: 'IBM Plex Mono', monospace;
@@ -23,6 +43,10 @@ p, li{
     margin-block-end: 0px;
     line-height: 25px;
     background-color: var(--background-color);
+}
+
+li:hover{
+    color: var(--text-select-color);
 }
 
 

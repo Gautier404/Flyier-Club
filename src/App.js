@@ -45,6 +45,8 @@ function App() {
   const [display, setDisplay] = useState(1)
 
   const [selected, setSelected] = useState([1,1])
+  const backgroundClassNames = ["container1", "container2", "container3", "container4"]
+
 
   function expandDesign (id){
     if (!designes.some(design => design.expanded === true))
@@ -64,7 +66,7 @@ function App() {
   }
 
   return (
-    <div className='container'>
+    <div className={backgroundClassNames[selected[1]-1]}>
       {/* <div className='rBoarder'></div>
       <div className='lBoarder'></div> */}
       {/* <div >
