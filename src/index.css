@@ -22,25 +22,6 @@
   margin: auto;
 }
 
-.section_title{
-  /* position: absolute; */
-  width: 195px;
-  height: 47px;
-  left: 34px;
-  top: 26px;
-
-  font-family: IBM Plex Mono;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 47px;
-  color: #FFFFFF;
-}
-
-.section_title:hover{
-  color: #FF0000
-}
-
 /* #c1c8e4 */
 
 .title{
@@ -118,13 +99,13 @@
   display:block;
   margin: auto;
   text-align: center;
-  color: white;
+  color: 
 }
 
 .overlay {
   position: absolute;
   opacity: .2;
-  background-color: black;
+  background-color: red;
   top: 0;
   bottom: 0;
   left: 0;
@@ -140,7 +121,13 @@
 
 .expandIcon {
   position:absolute;
-  margin: 35% 35%;
+  margin: 5% 35%;
+  width: 30%;
+  height: 30%;
+}
+
+.downloadIcon {
+  margin: 5% 35%;
   width: 30%;
   height: 30%;
 }
