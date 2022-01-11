@@ -22,6 +22,25 @@
   margin: auto;
 }
 
+.section_title{
+  /* position: absolute; */
+  width: 195px;
+  height: 47px;
+  left: 34px;
+  top: 26px;
+
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 47px;
+  color: #FFFFFF;
+}
+
+.section_title:hover{
+  color: #FF0000
+}
+
 /* #c1c8e4 */
 
 .title{
@@ -99,7 +118,7 @@
   display:block;
   margin: auto;
   text-align: center;
-  color: 
+  color: white;
 }
 
 .overlay {
