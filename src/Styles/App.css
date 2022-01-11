@@ -24,6 +24,8 @@
 .container2,
 .container3,
 .container4{
+    display:flex;
+    flex-basis: space-between;
     background-color: var(--background-color);
     background-repeat: repeat;
     background-position: 25px 25px;
@@ -32,6 +34,12 @@
     flex-grow:1;
 }
 
+.content{
+    width:100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
 
 
 p, li, a{
@@ -68,12 +76,12 @@ h1{
 }
 
 .welcomeText{
-    width: 348px;
+    width: 80%;
 }
 
 .recycleList{
     margin-block-start: 0px;
     margin-block-end: 0px;
     background-color: var(--background-color);
-    width: 248px;
+    width: 60%;
 }

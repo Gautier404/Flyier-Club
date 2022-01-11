@@ -76,40 +76,40 @@ function App() {
         <h2 className='title'>Flyer Gallary</h2>
       </div> */}
 
-      <div class='section_title' 
-        onClick={()=>(setDisplay(1), setSelected([1,1]))}
-        onMouseEnter={()=>(setSelected([selected[0],1]))}
-        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
-          <h1 className = {selected[1] === 1 ? "selected": "notSelected"}>FLIERCLUB</h1>
+      <div className="menu">
+        <div class='section_title' 
+          onClick={()=>(setDisplay(1), setSelected([1,1]))}
+          onMouseEnter={()=>(setSelected([selected[0],1]))}
+          onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+            <h1 className = {selected[1] === 1 ? "selected": "notSelected"}>FLIERCLUB</h1>
+        </div>
+
+        <div class='section_title' 
+          onClick={()=>(setDisplay(2), setSelected([2,2]))}
+          onMouseEnter={()=>(setSelected([selected[0],2]))}
+          onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+            <h1 className = {selected[1] === 2 ? "selected": "notSelected"}>DISCORD</h1>
+        </div>
+
+        <div class='section_title' 
+          onClick={()=>(setDisplay(3), setSelected([3,3]))}
+          onMouseEnter={()=>(setSelected([selected[0],3]))}
+          onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+            <h1 className = {selected[1] === 3 ? "selected": "notSelected"}>GALLERY</h1>
+       </div>
+      
+       <div class='section_title' 
+          onClick={()=>(setDisplay(4), setSelected([4,4]))}
+          onMouseEnter={()=>(setSelected([selected[0],4]))}
+          onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+            <h1 className = {selected[1] === 4 ? "selected": "notSelected"}>RECYCLE</h1>
+        </div>
       </div>
 
-      {display === 1 ? <p className = "welcomeText">Hello. This is Flier Club. To submit a design of your own join our Discord. All official designs are published in Gallery. We spend a lot of time and effort making our fliers and wouldn’t want to see them go to waste. See Recycle to give your flier new life.</p> : ""}
       
-      <div class='section_title' 
-        onClick={()=>(setDisplay(2), setSelected([2,2]))}
-        onMouseEnter={()=>(setSelected([selected[0],2]))}
-        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
-          <h1 className = {selected[1] === 2 ? "selected": "notSelected"}>DISCORD</h1>
-      </div>
-      
-      {/* display === 2 ? <p>The Awesome</p> : "" */}
-
-      <div class='section_title' 
-        onClick={()=>(setDisplay(3), setSelected([3,3]))}
-        onMouseEnter={()=>(setSelected([selected[0],3]))}
-        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
-          <h1 className = {selected[1] === 3 ? "selected": "notSelected"}>GALLERY</h1>
-      </div>
-      
+      <div className="content">
+      {display === 1 ? <p className = "welcomeText">Hello. This is Flier Club. To submit a design of your own join our Discord. All official designs are published in Gallery. We spend a lot of time and effort making our fliers and wouldn’t want to see them go to waste. See Recycle to give your flier new life.</p>: ""}
       {display === 3 ? <DesTable designes={designes} onClick={expandDesign}/> : ""}
-      
-      <div class='section_title' 
-        onClick={()=>(setDisplay(4), setSelected([4,4]))}
-        onMouseEnter={()=>(setSelected([selected[0],4]))}
-        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
-          <h1 className = {selected[1] === 4 ? "selected": "notSelected"}>RECYCLE</h1>
-      </div>
-      
       {display === 4 ? <ol className="recycleList">
         <li>Regift/Display Flier</li>
         <li><a href = "https://youtu.be/3BNg4fDJC8A?t=186">Fold worlds longest flying paper airplane</a></li>
@@ -122,7 +122,7 @@ function App() {
                 <Expanded trigger={design.expanded} design={design} onClose={closeDesign}/>
             ))}
       
-      {/* <Design image_path={designes[0].image_path} design_path={designes[0].design_path} author={designes[0].author} title={designes[0].title}/> */}
+      </div>
     </div>
   );
 }

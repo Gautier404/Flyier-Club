@@ -1,28 +1,9 @@
 @import './Constants.css';
 
-
-/* @media(min-width:468px){ */
-    .design {
-      height: 150px;
-      background-color: #84ceeb;
-      /* padding: 1px; */
-      /* margin-bottom: 20px; */
-    }
-
-  /* @media(max-width:468px){
-    .designTable {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-    .design {
-      width: 80%;
-      padding: 1px;
-      box-sizing:border-box;
-      margin-bottom: 20px;
-    }
-  
-  } */
+  .design {
+    height: 150px;
+    background-color: white;
+  }
   
   .thumbnail-box {
     height: 100%;
