@@ -15,7 +15,7 @@ const Design = ({design, onClick}) => {
                     <div className="overlay" > 
                         <h3 className="des_label">{design.title}</h3>
                         <h4 className="des_label">{design.author}</h4>
-                        <a href={design.design_path} className='link' download><img src={download_icon} className="downloadIcon"/></a>
+                        <a href={design.design_path} className='link'><img src={download_icon} className="downloadIcon"/></a>
                         <img onClick={() => onClick(design.id)} className="expandIcon" src={expandIcon}/>
                     </div>
                     <img src={design.image_path} className='thumbnail'/>
