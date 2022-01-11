@@ -66,7 +66,7 @@ function App() {
   }
 
   return (
-    <div className={backgroundClassNames[selected[1]-1]}>
+    <div className={backgroundClassNames[selected[0]-1]}>
       {/* <div className='rBoarder'></div>
       <div className='lBoarder'></div> */}
       {/* <div >
