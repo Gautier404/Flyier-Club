@@ -1,6 +1,7 @@
 import Design from "./components/Design";
 import svg from './designes/test_svg.svg'
-import './index.css'
+//import './index.css'
+import './Styles/App.css'
 import { useState } from "react"
 import DesTable from "./components/DesTable";
 import Expanded from "./components/Expanded";
@@ -43,6 +44,8 @@ function App() {
 
   const [display, setDisplay] = useState(1)
 
+  const [selected, setSelected] = useState([1,1])
+
   function expandDesign (id){
     if (!designes.some(design => design.expanded === true))
     {
@@ -69,18 +72,46 @@ function App() {
         <p className='text'> la;ldskj fasdjflsdkfj ;laf ldhfkl jadsalkfj sdl;kfj a;lsdkfj ;aslkdfj ;ladskfj ;laksdf j;laksfj ;lakdsj f;laskdjf ;lkasdjf ;laksdjf ;laksdjf ;laksdjf ;lkadsjf ;laksdjf hflasdjhfkajsdh </p>
         <h2 className='title'>Flyer Gallary</h2>
       </div> */}
-      <div class='section_title' onClick={()=>(setDisplay(1))}><h1>FLIERCLUB</h1></div><br/>
-      {display === 1 ? <p>Hello. This is Flier Club. To submit a design of your own join our Discord. All official designs are published in Gallery. We spend a lot of time and effort making our fliers and wouldn’t want to see them go to waste. See Recycle to give your flier new life.</p> : ""}
-      <div class='section_title' onClick={()=>(setDisplay(2))}><h1>DISCORD</h1></div><br/>
-      {display === 2 ? <p>The Awesome</p> : ""}
-      <div class='section_title' onClick={()=>(setDisplay(3))}><h1>GALLERY</h1></div><br/>
+
+      <div class='section_title' 
+        onClick={()=>(setDisplay(1), setSelected([1,1]))}
+        onMouseEnter={()=>(setSelected([selected[0],1]))}
+        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+          <h1 className = {selected[1] === 1 ? "selected": "notSelected"}>FLIERCLUB</h1>
+      </div>
+
+      {display === 1 ? <p className = "welcomeText">Hello. This is Flier Club. To submit a design of your own join our Discord. All official designs are published in Gallery. We spend a lot of time and effort making our fliers and wouldn’t want to see them go to waste. See Recycle to give your flier new life.</p> : ""}
+      
+      <div class='section_title' 
+        onClick={()=>(setDisplay(2), setSelected([2,2]))}
+        onMouseEnter={()=>(setSelected([selected[0],2]))}
+        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+          <h1 className = {selected[1] === 2 ? "selected": "notSelected"}>DISCORD</h1>
+      </div>
+      
+      {/* display === 2 ? <p>The Awesome</p> : "" */}
+
+      <div class='section_title' 
+        onClick={()=>(setDisplay(3), setSelected([3,3]))}
+        onMouseEnter={()=>(setSelected([selected[0],3]))}
+        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+          <h1 className = {selected[1] === 3 ? "selected": "notSelected"}>GALLERY</h1>
+      </div>
+      
       {display === 3 ? <DesTable designes={designes} onClick={expandDesign}/> : ""}
-      <div class='section_title' onClick={()=>(setDisplay(4))}><h1>RECYCLE</h1></div><br/>
-      {display === 4 ? <ol>
-        <li>1. Regift/Display Flier</li>
-        <li>2. Fold worlds longest flying paper airplane</li>
-        <li>3. Create A Sitting Puppy</li>
-        <li>4. Make an envelope to hold a note to a friend.</li>
+      
+      <div class='section_title' 
+        onClick={()=>(setDisplay(4), setSelected([4,4]))}
+        onMouseEnter={()=>(setSelected([selected[0],4]))}
+        onMouseLeave={()=>(setSelected([selected[0], selected[0]]))}>
+          <h1 className = {selected[1] === 4 ? "selected": "notSelected"}>RECYCLE</h1>
+      </div>
+      
+      {display === 4 ? <ol className="recycleList">
+        <li>Regift/Display Flier</li>
+        <li>Fold worlds longest flying paper airplane</li>
+        <li>Create A Sitting Puppy</li>
+        <li>Make an envelope to hold a note to a friend.</li>
         </ol>: ""}
   
       

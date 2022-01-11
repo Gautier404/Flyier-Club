@@ -1,5 +1,5 @@
 import Design from "./Design"
-
+import "../Styles/DesTable.css"
 const DesTable = ({designes, onClick}) => {
     return (
         <div className='designTable'>

@@ -1,0 +1,7 @@
+:root {
+    --background-color:  #000000;
+    --text-color: #ffffff;
+    --text-select-color: #ff0000;
+    --speed: 300ms;
+    --page-width: 60%;
+  }

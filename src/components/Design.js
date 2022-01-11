@@ -1,6 +1,6 @@
 import React from 'react'
 import expandIcon from '../designes/expand.png'
-
+import '../Styles/Design.css'
 
 const Design = ({design, onClick}) => {
     // const expand = () => (
