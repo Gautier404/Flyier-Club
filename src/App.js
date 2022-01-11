@@ -5,6 +5,7 @@ import './Styles/App.css'
 import { useState } from "react"
 import DesTable from "./components/DesTable";
 import Expanded from "./components/Expanded";
+import Puppy from "./designes/BusinessCardPuppy.pdf";
 
 function App() {
   const [designes, setDesignes] = useState([
@@ -111,9 +112,9 @@ function App() {
       
       {display === 4 ? <ol className="recycleList">
         <li>Regift/Display Flier</li>
-        <li>Fold worlds longest flying paper airplane</li>
-        <li>Create A Sitting Puppy</li>
-        <li>Make an envelope to hold a note to a friend.</li>
+        <li><a href = "https://youtu.be/3BNg4fDJC8A?t=186">Fold worlds longest flying paper airplane</a></li>
+        <li><a href = "./designes/BusinessCardPuppy.pdf">Create A Sitting Puppy</a></li>
+        <li><a>Make an envelope to hold a note to a friend.</a></li>
         </ol>: ""}
   
       
