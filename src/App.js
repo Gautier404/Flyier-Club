@@ -66,6 +66,8 @@ function App() {
     )))
   }
 
+
+  var airplane_link = `<a href="https://youtu.be/3BNg4fDJC8A?t=186">Fold worlds longest flying paper airplane</a>`;
   return (
     <div className={backgroundClassNames[selected[0]-1]}>
       {/* <div className='rBoarder'></div>
@@ -112,8 +114,12 @@ function App() {
       {display === 3 ? <DesTable designes={designes} onClick={expandDesign}/> : ""}
       {display === 4 ? <ol className="recycleList">
         <li>Regift/Display Flier</li>
-        <li><a href = "https://youtu.be/3BNg4fDJC8A?t=186">Fold worlds longest flying paper airplane</a></li>
-        <li><a href = "./designes/BusinessCardPuppy.pdf">Create A Sitting Puppy</a></li>
+        <li><div 
+          dangerouslySetInnerHTML={{
+              __html: airplane_link.replace(/href/g, "target='_blank' href")
+          }}>
+        </div></li>
+        <li><a href = {Puppy} target="_blank" rel="noopener noreferrer">Create A Sitting Puppy</a></li>
         <li><a>Make an envelope to hold a note to a friend.</a></li>
         </ol>: ""}
   
