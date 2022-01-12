@@ -43,7 +43,7 @@
 }
 
 
-p, li{
+p, li, a{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 24px;
     font-weight: 300;
@@ -54,7 +54,8 @@ p, li{
     background-color: var(--background-color);
 }
 
-li:hover{
+li:hover,
+a:hover{
     color: var(--text-select-color);
 }
 
