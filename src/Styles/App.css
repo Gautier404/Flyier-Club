@@ -53,6 +53,10 @@ p, li, a{
     background-color: var(--background-color);
 }
 
+a{
+    text-decoration: none;
+}
+
 li:hover,
 a:hover{
     color: var(--text-select-color);

@@ -13,8 +13,8 @@ const Design = ({design, onClick}) => {
         <div className='design'>
                 <div className="thumbnail-box">
                     <div className="overlay" > 
-                        <h3 className="des_label">{design.title}</h3>
-                        <h4 className="des_label">{design.author}</h4>
+                        <h1 className="des_label">{design.title}</h1>
+                        <p className="des_label">{design.author}</p>
                         <a href={design.design_path} className='link'><img src={download_icon} className="downloadIcon"/></a>
                         <img onClick={() => onClick(design.id)} className="expandIcon" src={expandIcon}/>
                     </div>
