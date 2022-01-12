@@ -12,9 +12,11 @@ const Design = ({design, onClick}) => {
     return (
         <div className='design'>
                 <div className="thumbnail-box">
-                    <div className="overlay" > 
+                    <div className="overlay" >
+                        <div className = "overlay-top"> 
                         <h1 className="des_label">{design.title}</h1>
                         <p className="des_label">{design.author}</p>
+                        </div>
                         <a href={design.design_path} className='link'><img src={download_icon} className="downloadIcon"/></a>
                         <img onClick={() => onClick(design.id)} className="expandIcon" src={expandIcon}/>
                     </div>
