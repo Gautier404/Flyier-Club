@@ -1,10 +1,13 @@
 @import './Constants.css';
 
   .design {
-    height: 150px;
+    height: 250px;
     background-color: white;
   }
   
+  .design:hover {
+    border: 2px var(--text-select-color);
+  }
   .thumbnail-box {
     height: 100%;
     display: block;

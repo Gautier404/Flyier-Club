@@ -5,7 +5,8 @@ import './Styles/App.css'
 import { useState } from "react"
 import DesTable from "./components/DesTable";
 import Expanded from "./components/Expanded";
-import Puppy from "./designes/BusinessCardPuppy.pdf";
+import Puppy from "./designes/BussinessCardPuppy.PNG"
+import Letter from "./designes/Letter.PNG"
 
 function App() {
   const [designes, setDesignes] = useState([
@@ -67,7 +68,6 @@ function App() {
   }
 
 
-  var airplane_link = `<a href="https://youtu.be/3BNg4fDJC8A?t=186">Fold worlds longest flying paper airplane</a>`;
   return (
     <div className={backgroundClassNames[selected[0]-1]}>
       {/* <div className='rBoarder'></div>
@@ -111,16 +111,13 @@ function App() {
       
       <div className="content">
       {display === 1 ? <p className = "welcomeText">Hello. This is Flier Club. To submit a design of your own join our Discord. All official designs are published in Gallery. We spend a lot of time and effort making our fliers and wouldn’t want to see them go to waste. See Recycle to give your flier new life.</p>: ""}
+      {display === 2 ? <p className = "discordText"><a href="https://discord.gg/AfNaupGa" target="_blank" rel="noopener noreferrer">Join us on Discord!</a></p>: ""}
       {display === 3 ? <DesTable designes={designes} onClick={expandDesign}/> : ""}
       {display === 4 ? <ol className="recycleList">
         <li>Regift/Display Flier</li>
-        <li><div 
-          dangerouslySetInnerHTML={{
-              __html: airplane_link.replace(/href/g, "target='_blank' href")
-          }}>
-        </div></li>
+        <li><a href="https://youtu.be/3BNg4fDJC8A?t=186" target="_blank" rel="noopener noreferrer">Fold worlds longest flying paper airplane</a></li>
         <li><a href = {Puppy} target="_blank" rel="noopener noreferrer">Create A Sitting Puppy</a></li>
-        <li><a>Make an envelope to hold a note to a friend.</a></li>
+        <li><a href = {Letter} target="_blank" rel="noopener noreferrer">Make an envelope to hold a note to a friend.</a></li>
         </ol>: ""}
   
       
