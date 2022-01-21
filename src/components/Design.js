@@ -17,8 +17,11 @@ const Design = ({design, onClick}) => {
                         <h1 className="des_label">{design.title}</h1>
                         <p className="des_label">{design.author}</p>
                         </div>
-                        <a href={design.design_path} className='link'><img src={download_icon} className="downloadIcon"/></a>
-                        <img onClick={() => onClick(design.id)} className="expandIcon" src={expandIcon}/>
+                        <br/>
+                        <div className="icons">
+                            <a href={design.design_path} download className='link'><img src={download_icon} className="downloadIcon"/></a>
+                            <img onClick={() => onClick(design.id)} className="expandIcon" src={expandIcon}/>
+                        </div>
                     </div>
                     <img src={design.image_path} className='thumbnail'/>
                 </div>

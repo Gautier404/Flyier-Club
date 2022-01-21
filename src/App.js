@@ -1,12 +1,13 @@
 import Design from "./components/Design";
 import svg from './designes/test_svg.svg'
-//import './index.css'
 import './Styles/App.css'
 import { useState } from "react"
 import DesTable from "./components/DesTable";
 import Expanded from "./components/Expanded";
 import Puppy from "./designes/BussinessCardPuppy.PNG"
 import Letter from "./designes/Letter.PNG"
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 function App() {
   const [designes, setDesignes] = useState([
@@ -43,6 +44,9 @@ function App() {
       expanded: false,
     }
   ])
+
+  const touch = useMediaQuery('(hover: none)');
+
 
   const [display, setDisplay] = useState(1)
 
@@ -122,7 +126,7 @@ function App() {
   
       
       {designes.map((design) => (
-                <Expanded trigger={design.expanded} design={design} onClose={closeDesign}/>
+                <Expanded trigger={design.expanded} design={design} onClose={closeDesign} onClick={expandDesign} touch={touch}/>
             ))}
       
       </div>
