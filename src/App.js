@@ -58,12 +58,15 @@ function App() {
     console.log(id)
     if (!designes.some(design => design.expanded === true))
     {
-      setDesignes(designes.map((design) => (
-        design.id==id ?
-        {...design, expanded: true} : design
-      )))
+      const newDes = designes.map((design) => {
+        return design.id==id ? {...design, expanded: true} : design
+        
+      })
+      console.log("newDes: ")
+      console.log(newDes)
+      setDesignes(newDes, ()=> console.log(designes))
+      
     }
-    console.log(designes)
   }
 
   function closeDesign (id){
@@ -75,10 +78,15 @@ function App() {
 
   function showTouchOverlay(id, shown)
   {
-    setDesignes(designes.map((design) => (
-      design.id==id?
-      {...design, clicked: shown} : design
-    )))
+    // console.log(designes)
+    if(!designes.some((design) => design.expanded === true))
+    {
+      setDesignes(designes.map((design) => (
+        design.id==id?
+        {...design, clicked: shown} : design
+      )))
+    }
+    // console.log(designes)
   }
 
   return (

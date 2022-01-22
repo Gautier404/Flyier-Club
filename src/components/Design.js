@@ -28,7 +28,7 @@ const Design = ({design, onClick, showTouchOverlay}) => {
         </div>
         :
         <div className='design' >
-            <div className="thumbnail-box" onClick={() => showTouchOverlay(design.id, true)}>
+            <div className="thumbnail-box" onClick={() => (!design.clicked) ? showTouchOverlay(design.id, true) : ""}>
                 <TouchOverlay design={design} onClick={onClick} showTouchOverlay={showTouchOverlay}/>
                 <img src={design.image_path} className='thumbnail'/>
             </div>
@@ -50,6 +50,7 @@ const TouchOverlay = ({design, onClick, showTouchOverlay}) => {
 
       
     const handleClick = (e) => {
+        // console.log(design)
         if (node.current && !node.current.contains(e.target)) {
           showTouchOverlay(design.id, false);
         }
