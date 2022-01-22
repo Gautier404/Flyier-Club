@@ -1,18 +1,16 @@
-import {useState} from 'react'
+// import {useState} from 'react'
 import expandIcon from '../designes/expand.png'
 import '../Styles/Design.css'
 import download_icon from '../designes/download_icon.png'
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useEffect, useRef} from 'react';
 
 
 
-const Design = ({design, onClick}) => {
-    // const expand = () => (
-    //     img.style.transform = "scale(1.5)"
-    //     img.style.transition = "transform 0.25s ease"
-    // )
+const Design = ({design, onClick, showTouchOverlay}) => {
+
     const hover = useMediaQuery('(hover: hover)');
-    const [clicked, setClicked] = useState(false);
+    
 
     return (hover ? 
         <div className='design'>
@@ -29,19 +27,36 @@ const Design = ({design, onClick}) => {
             </div>
         </div>
         :
-        <div className='design'>
-            <div className="thumbnail-box" onClick={() => setClicked(!clicked)}>
-                <TouchOverlay design={design} onClick={onClick} clicked={clicked}/>
+        <div className='design' >
+            <div className="thumbnail-box" onClick={() => showTouchOverlay(design.id, true)}>
+                <TouchOverlay design={design} onClick={onClick} showTouchOverlay={showTouchOverlay}/>
                 <img src={design.image_path} className='thumbnail'/>
             </div>
         </div>
     );
 }
 
-const TouchOverlay = ({design, onClick, clicked}) => {
-    
-    return (clicked) ? 
-        <div className="overlay" >
+const TouchOverlay = ({design, onClick, showTouchOverlay}) => {
+
+    const node = useRef();
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClick, {capture: true});
+        // return function to be called when unmounted
+        return () => {
+          document.removeEventListener("mousedown", handleClick);
+        };
+      }, []);
+
+      
+    const handleClick = (e) => {
+        if (node.current && !node.current.contains(e.target)) {
+          showTouchOverlay(design.id, false);
+        }
+    };
+
+    return (design.clicked) ? 
+        <div className="overlay" ref={node}>
             <div className = "overlay-top"> 
                 <h1 className="des_label">{design.title}</h1>
                 <p className="des_label">{design.author}</p>
