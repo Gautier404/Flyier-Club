@@ -39,6 +39,7 @@ const Design = ({design, onClick, showTouchOverlay}) => {
 const TouchOverlay = ({design, onClick, showTouchOverlay}) => {
 
     const node = useRef();
+    const exp = useRef();
 
     useEffect(() => {
         document.addEventListener("mousedown", handleClick, {capture: true});
@@ -51,8 +52,10 @@ const TouchOverlay = ({design, onClick, showTouchOverlay}) => {
       
     const handleClick = (e) => {
         // console.log(design)
-        if (node.current && !node.current.contains(e.target)) {
-          showTouchOverlay(design.id, false);
+        if (node.current && !node.current.contains(e.target) && !exp.current.contains(e.target)) {
+            console.log("click")
+            console.log(design)
+            showTouchOverlay(design.id, false);
         }
     };
 
@@ -63,7 +66,7 @@ const TouchOverlay = ({design, onClick, showTouchOverlay}) => {
                 <p className="des_label">{design.author}</p>
             </div>
             <a href={design.design_path} download><img src={download_icon} className="downloadIcon"/></a>
-            <img onClick={() => onClick(design.id)} className="expandIcon" src={expandIcon}/>
+            <img onClick={() => onClick(design.id)} ref={exp} className="expandIcon" src={expandIcon}/>
         </div> : ""
 }
 

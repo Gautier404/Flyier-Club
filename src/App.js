@@ -64,8 +64,8 @@ function App() {
       })
       console.log("newDes: ")
       console.log(newDes)
-      setDesignes(newDes, ()=> console.log(designes))
-      
+      setDesignes(newDes)
+      // console.log(designes)
     }
   }
 
@@ -79,13 +79,10 @@ function App() {
   function showTouchOverlay(id, shown)
   {
     // console.log(designes)
-    if(!designes.some((design) => design.expanded === true))
-    {
-      setDesignes(designes.map((design) => (
-        design.id==id?
-        {...design, clicked: shown} : design
-      )))
-    }
+    setDesignes(designes.map((design) => (
+      design.id==id?
+      {...design, clicked: shown} : design
+    )))
     // console.log(designes)
   }
 
