@@ -1,19 +1,18 @@
 @import './Constants.css';
 
   .design {
-    height: 250px;
+    padding-top: 20px;
     background-color: white;
     transition: .2s ease;
   }
   .thumbnail-box {
-    height: 100%;
     display: block;
     margin: auto;
     position: relative;
   }
   
   .thumbnail {
-    height: 100%;
+    width: 100%;
     display: block;
     margin: auto;
     /* border-radius: 5px; */
@@ -139,12 +138,4 @@
     /* max-width: 80%;
     max-height: 80%;  */
     /* background-color: white; */
-  }
-
-
-  @media(max-width: 550px) {
-    .design {
-      height: 150px;
-    }
-    
   }
