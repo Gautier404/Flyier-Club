@@ -1,12 +1,23 @@
 @import './Constants.css';
 
+
+@media(min-width: 550px) {
   .design {
     padding-top: 20px;
     background-color: white;
     transition: .2s ease;
-    width: 266.6px;
-    max-width: 33.3vw;
   }
+}
+
+@media(max-width: 550px) {
+  .design {
+    padding-top: 30px;
+    background-color: white;
+    transition: .2s ease;
+    width: 100%;
+  }
+}
+
   .thumbnail-box {
     display: block;
     margin: auto;
@@ -14,13 +25,11 @@
   }
   
   .thumbnail {
-    width: 100%;
-    display: block;
-    margin: auto;
+    width: 100%
     /* border-radius: 5px; */
   }
   
-  .design a{
+  .thumbnail-box a{
     display:block;
     text-align: center;
     background-color: var(--text-select-color);
@@ -45,13 +54,13 @@
     background-color:var(--text-color);
   }
   
-  .design h1{
+  .thumbnail-box h1{
     font-size: 24px;
     width:max-content;
     color: var(--background-color);
     background-color:transparent;
   }
-  .design p{
+  .thumbnail-box p{
     width:max-content;
     color: var(--background-color);
     background-color:transparent;
@@ -93,6 +102,7 @@
   .expanded {
     position: fixed;
     top: 0;
+    left:0;
     width: 100%;
     height: 100%;
     display:flex;
@@ -129,9 +139,6 @@
   }
   
   .expanded-image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
     margin: auto;
     vertical-align: middle;
     object-fit: contain;

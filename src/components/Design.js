@@ -1,7 +1,5 @@
 import React from 'react'
-import expandIcon from '../designes/expand.png'
 import '../Styles/Design.css'
-import download_icon from '../designes/download_icon.png'
 
 
 const Design = ({design, onClick}) => {
@@ -12,16 +10,12 @@ const Design = ({design, onClick}) => {
     return (
         <div className='design'>
                 <div className="thumbnail-box">
-                    <div className="overlay" >
-                        <div className = "overlay-top"> 
-                        <h1 className="des_label">{design.title}</h1>
-                        <p className="des_label">{design.author}</p>
-                        </div>
-                        <a href={design.design_path} className='link'><img src={download_icon} className="downloadIcon"/></a>
-                        <img onClick={() => onClick(design.id)} className="expandIcon" src={expandIcon}/>
+                <div className="overlay" onClick={() => onClick(design.id)}>
+                        <div className = "overlay-top"></div>
                     </div>
                     <img src={design.image_path} className='thumbnail'/>
                 </div>
+                <p>#{design.number} <a href={design.design_path}>{design.title}</a> {design.author_link != 'none'? <a href = {design.author_link}>{design.author}</a>: design.author}</p>
             
         </div>
     );

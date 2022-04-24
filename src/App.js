@@ -1,53 +1,59 @@
-import Design from "./components/Design";
+//designs
 import svg from './designes/test_svg.svg'
+import dogPlane from './designes/DogPlane.jpg'
+import tiger from './designes/Tiger.jpg'
+import physcadellic from './designes/Physcadellic.jpg'
+import bongos from './designes/Bongos.jpg'
+
 //import './index.css'
 import './Styles/App.css'
 import { useState } from "react"
 import DesTable from "./components/DesTable";
 import Expanded from "./components/Expanded";
-import Puppy from "./designes/BussinessCardPuppy.PNG"
-import Letter from "./designes/Letter.PNG"
 
 function App() {
   const [designes, setDesignes] = useState([
     {
       id: 1,
-      image_path: svg,
-      design_path: svg,
-      title: 'test icon',
-      author: 'interweb',
+      number: "003",
+      image_path: dogPlane,
+      design_path: dogPlane,
+      title: '"Red Baron"',
+      author: 'Drew',
+      author_link: 'https://www.instagram.com/mmmmsquiglylines/',
       expanded: false,
     },
     {
       id: 2,
-      image_path: svg,
-      design_path: svg,
-      title: 'test icon2',
-      author: 'interweb2',
+      number: "004",
+      image_path: tiger,
+      design_path: tiger,
+      title: '"Tiger"',
+      author: 'Drew',
+      author_link: 'https://www.instagram.com/mmmmsquiglylines/',
       expanded: false,
     },
     {
       id: 3,
-      image_path: svg,
-      design_path: svg,
-      title: 'test icon3',
-      author: 'interweb3',
+      number: "002",
+      image_path: physcadellic,
+      design_path: physcadellic,
+      title: 'untitled',
+      author: 'Drew',
+      author_link: 'none',
       expanded: false,
     },
     {
       id: 4,
-      image_path: svg,
-      design_path: svg,
-      title: 'test icon4',
-      author: 'interweb4',
+      number: "001",
+      image_path: bongos,
+      design_path: bongos,
+      title: '"Bongos"',
+      author: 'Drew',
+      author_link: 'https://www.instagram.com/mmmmsquiglylines/',
       expanded: false,
     }
   ])
-
-  const [display, setDisplay] = useState(1)
-
-  const [selected, setSelected] = useState([1,1])
-  const backgroundClassNames = ["container1", "container2", "container3", "container4"]
 
   function showTouchOverlay(id, shown)
   {
@@ -86,8 +92,8 @@ function App() {
         <p className='text'> la;ldskj fasdjflsdkfj ;laf ldhfkl jadsalkfj sdl;kfj a;lsdkfj ;aslkdfj ;ladskfj ;laksdf j;laksfj ;lakdsj f;laskdjf ;lkasdjf ;laksdjf ;laksdjf ;laksdjf ;lkadsjf ;laksdjf hflasdjhfkajsdh </p>
         <h2 className='title'>Flyer Gallary</h2>
       </div> */}
-      <h1>//FLIERCLUB</h1>
-      <p>//Inquiries & Flier Submissions>><a>temp link</a></p>
+      <h1>FLIERCLUB</h1>
+      <p>Inquiries & Flier Submissions >> <a href = "mailto: notouremail@gmail.com">notouremail@gmail.com</a></p>
       <DesTable designes={designes} onClick={expandDesign}  showTouchOverlay={showTouchOverlay}/>
       {designes.map((design) => (
                 <Expanded trigger={design.expanded} design={design} onClose={closeDesign}/>
@@ -96,8 +102,5 @@ function App() {
       </div>
   );
 }
-const title = {
-  color:'red',
-  backgroundColor:"blue",
-}
+
 export default App;

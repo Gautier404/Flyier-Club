@@ -12,9 +12,19 @@
     }
     .container{
         padding-top: 100px;
+        padding-bottom: 100px;
         background-color: var(--background-color);
         width:800px;
         max-width: 100vw;
+    }
+    p, li, a{
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 24px;
+        font-weight: 300;
+        color: var(--text-color);
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        line-height: 25px;
     }
 }
 
@@ -25,26 +35,25 @@
     }
     .container{
         background-color: var(--background-color);
+        padding-top: 100px;
+        padding: 12px;
+        padding-bottom: 100px;
+    }
+    p, li, a{
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 24px;
+        font-weight: 300;
+        color: var(--text-color);
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        line-height: 25px;
     }
 }
 
 
-
-
-
-p, li, a{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 24px;
-    font-weight: 300;
-    color: var(--text-color);
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    line-height: 25px;
-    background-color: var(--background-color);
-}
-
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 li:hover,
@@ -63,7 +72,6 @@ h1{
     line-height: 50px;
     background-color: var(--background-color);
     width:min-content;
-    cursor: pointer;
 }
 
 .selected{
