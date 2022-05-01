@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Flyier-Club/static/css/main.98d2001d.chunk.css",
+    "main.js": "/Flyier-Club/static/js/main.5f0fbfca.chunk.js",
+    "main.js.map": "/Flyier-Club/static/js/main.5f0fbfca.chunk.js.map",
+    "runtime-main.js": "/Flyier-Club/static/js/runtime-main.881ab1d5.js",
+    "runtime-main.js.map": "/Flyier-Club/static/js/runtime-main.881ab1d5.js.map",
+    "static/js/2.a3cafdcc.chunk.js": "/Flyier-Club/static/js/2.a3cafdcc.chunk.js",
+    "static/js/2.a3cafdcc.chunk.js.map": "/Flyier-Club/static/js/2.a3cafdcc.chunk.js.map",
+    "static/js/3.72c2b55a.chunk.js": "/Flyier-Club/static/js/3.72c2b55a.chunk.js",
+    "static/js/3.72c2b55a.chunk.js.map": "/Flyier-Club/static/js/3.72c2b55a.chunk.js.map",
+    "index.html": "/Flyier-Club/index.html",
+    "static/css/main.98d2001d.chunk.css.map": "/Flyier-Club/static/css/main.98d2001d.chunk.css.map",
+    "static/js/2.a3cafdcc.chunk.js.LICENSE.txt": "/Flyier-Club/static/js/2.a3cafdcc.chunk.js.LICENSE.txt",
+    "static/media/Bongos.7f6a2503.jpg": "/Flyier-Club/static/media/Bongos.7f6a2503.jpg",
+    "static/media/DogPlane.b2a3b13d.jpg": "/Flyier-Club/static/media/DogPlane.b2a3b13d.jpg",
+    "static/media/Physcadellic.929c9e88.jpg": "/Flyier-Club/static/media/Physcadellic.929c9e88.jpg",
+    "static/media/Tiger.8fb12186.jpg": "/Flyier-Club/static/media/Tiger.8fb12186.jpg",
+    "static/media/test_svg.27cbbf13.svg": "/Flyier-Club/static/media/test_svg.27cbbf13.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.881ab1d5.js",
+    "static/js/2.a3cafdcc.chunk.js",
+    "static/css/main.98d2001d.chunk.css",
+    "static/js/main.5f0fbfca.chunk.js"
+  ]
+}
