@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Flyier-Club/static/css/main.3132df21.chunk.css",
+    "main.js": "/Flyier-Club/static/js/main.f3491ce9.chunk.js",
+    "main.js.map": "/Flyier-Club/static/js/main.f3491ce9.chunk.js.map",
+    "runtime-main.js": "/Flyier-Club/static/js/runtime-main.4b470da3.js",
+    "runtime-main.js.map": "/Flyier-Club/static/js/runtime-main.4b470da3.js.map",
+    "static/js/2.38fa3eca.chunk.js": "/Flyier-Club/static/js/2.38fa3eca.chunk.js",
+    "static/js/2.38fa3eca.chunk.js.map": "/Flyier-Club/static/js/2.38fa3eca.chunk.js.map",
+    "static/js/3.5c0de875.chunk.js": "/Flyier-Club/static/js/3.5c0de875.chunk.js",
+    "static/js/3.5c0de875.chunk.js.map": "/Flyier-Club/static/js/3.5c0de875.chunk.js.map",
+    "index.html": "/Flyier-Club/index.html",
+    "static/css/main.3132df21.chunk.css.map": "/Flyier-Club/static/css/main.3132df21.chunk.css.map",
+    "static/js/2.38fa3eca.chunk.js.LICENSE.txt": "/Flyier-Club/static/js/2.38fa3eca.chunk.js.LICENSE.txt",
+    "static/media/BussinessCardPuppy.386d4de8.PNG": "/Flyier-Club/static/media/BussinessCardPuppy.386d4de8.PNG",
+    "static/media/App.css": "/Flyier-Club/static/media/RECYCLE.a34f3f98.svg",
+    "static/media/Letter.8d4b48aa.PNG": "/Flyier-Club/static/media/Letter.8d4b48aa.PNG",
+    "static/media/test_svg.27cbbf13.svg": "/Flyier-Club/static/media/test_svg.27cbbf13.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b470da3.js",
+    "static/js/2.38fa3eca.chunk.js",
+    "static/css/main.3132df21.chunk.css",
+    "static/js/main.f3491ce9.chunk.js"
+  ]
+}
